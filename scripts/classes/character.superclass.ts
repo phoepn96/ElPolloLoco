@@ -1,4 +1,4 @@
-import { World } from "./world.class";
+import { World } from "./world.class.ts";
 
 export class Character {
   world!: World;

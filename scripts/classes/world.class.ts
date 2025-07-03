@@ -1,4 +1,4 @@
-import { Player } from "./player.class";
+import { Player } from "./player.class.ts";
 
 export class World {
   canvas!: HTMLCanvasElement;
@@ -20,5 +20,7 @@ export class World {
 
   update(): void {}
 
-  draw(): void {}
+  draw(): void {
+    this.player.draw();
+  }
 }
