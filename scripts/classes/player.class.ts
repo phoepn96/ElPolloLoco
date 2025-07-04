@@ -4,9 +4,12 @@ import { World } from "./world.class";
 export class Player extends Character {
   speed: number = 2;
   jumpForce: number = 10;
-  imageSrc: string = "./assets/spritesheets/player/player.png";
+  imageSrc: string = "../../assets/spritesheets/player/player.png";
   img!: HTMLImageElement;
   ctx!: CanvasRenderingContext2D;
+  spreadSheetX: number = 909.58;
+  spreadSheetY: number = 909.16;
+  counter: number = 0;
 
   constructor(
     world: World,
@@ -22,6 +25,20 @@ export class Player extends Character {
   update(): void {}
 
   draw(): void {
-    this.ctx.drawImage(this.img, this.x, this.y);
+    this.ctx.drawImage(
+      this.img,
+      this.spreadSheetX * this.counter,
+      909.16 * 3,
+      this.spreadSheetX,
+      this.spreadSheetY,
+      50,
+      50,
+      100,
+      100
+    );
+    this.counter++;
+    if (this.counter === 14) {
+      this.counter = 0;
+    }
   }
 }

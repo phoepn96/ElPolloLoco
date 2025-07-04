@@ -1,4 +1,4 @@
-import { World } from "./classes/world.class";
+import { World } from "./classes/world.class.ts";
 
 const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
@@ -22,6 +22,7 @@ function gameLoop(timestamp: number): void {
     world.update();
     world.draw();
     accumulator -= targetFrameTime;
+    console.log("test");
   }
 
   lastTime = timestamp;

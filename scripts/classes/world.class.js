@@ -11,10 +11,13 @@ export class World {
         this.ctx = ctx;
         this.width = canvas.width;
         this.height = canvas.height;
-        this.player = new Player(this, 50, 500);
+        this.player = new Player(this, 50, 50);
     }
-    update() { }
+    update() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
     draw() {
+        console.log("test-world");
         this.player.draw();
     }
 }

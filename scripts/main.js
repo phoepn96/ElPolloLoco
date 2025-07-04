@@ -1,4 +1,4 @@
-import { World } from "./classes/world.class";
+import { World } from "./classes/world.class.js";
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const targetFps = 45;
@@ -15,6 +15,7 @@ function gameLoop(timestamp) {
         world.update();
         world.draw();
         accumulator -= targetFrameTime;
+        console.log("test");
     }
     lastTime = timestamp;
     requestAnimationFrame(gameLoop);
