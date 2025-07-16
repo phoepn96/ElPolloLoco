@@ -22,7 +22,6 @@ function gameLoop(timestamp: number): void {
     world.update();
     world.draw();
     accumulator -= targetFrameTime;
-    console.log("test");
   }
 
   lastTime = timestamp;

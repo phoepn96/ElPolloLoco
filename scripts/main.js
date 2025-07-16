@@ -15,7 +15,6 @@ function gameLoop(timestamp) {
         world.update();
         world.draw();
         accumulator -= targetFrameTime;
-        console.log("test");
     }
     lastTime = timestamp;
     requestAnimationFrame(gameLoop);
